@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title> Boxmodell</title>
+    <link rel="stylesheet" type ="text/css"  href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Rubrik på sidan --> 
+    <header class ="header">
+        <h1 class ="header">Boxmodell</h1>
+    </header>
+    <!--Navigation listan på sidan hem -->
+  
+    <nav>
+        <label for="menucheckbox" id="menuicon"></label>
+        <input type="checkbox" id="menucheckbox">
+        <ul>
+            <li><a href="index.html" class="openPage">Boxmodell</a></li>
+            <li><a href="second.html">Navigering</a></li>
+            <li><a href="third.html">Målgrupp</a></li>
+        </ul>
+    </nav>
+        <main>
+            <h1 class ="headings">Boxmodellen och CSS-egenskaper</h1>
+            <img class ="image_1 image_2" src="images/boxmodell.PNG" alt ="boxmodell">
+            <p class ="PARAGRAPH" >Alla html elemet har <i>Boxmodell</i>. I Css termin <i>Boxmodell</i> byteder en låda “box” och som anväder man att skapa och deignera layout till olika webbplatser. 
+            <i>Boxmodell</i> är ett sätt att beskriva html element som har fyra olika egenskapar till exempel content själv, padding, border, margin.</p>
+            <h2 class="heading_2">Content</h2>
+            <p class ="PARAGRAPH">Det är innehåller som ligger inuti I box och där ser man texter, bilder, video och mm.
+             Man kan fixa storlek (att göra mindre och större) genom att använda bred och hjöd egenskapar. </p> 
+            <h2  class="heading_2">Padding</h2> 
+            <p class ="PARAGRAPH">Detta egenskapar använder man för att skapa tom rum runt omkring content.
+             Padding egenskapen innehåller Padding-top, padding-right, padding-bottom och padding-left. Detta är trasnsparent.</p>
+            <h2  class="heading_2">Border</h2>
+            <p class ="PARAGRAPH">Detta egenskapar använder man för att skapa en kantlinjen runt content och padding. 
+            Border egenskapen består av border-style, border-width och border-color.</p> 
+            <h2  class="heading_2">Margin</h2 >
+            <p class ="PARAGRAPH">Detta egenskapar använder man för att skapa en tom rum mellan olika box-element. 
+            Marginal egenskapen inehåller margin-top, margin-bottom, margin-left och margin-right. Detta är trasnsparent.</p>
+            <h1  class ="headings">Content-box och border-box</h1>
+            <p class ="PARAGRAPH">Det är stor skillnaden mellan border-box och content box när man använder de. 
+            Självklart man förstår inte på en gång och det tar ganska
+            lång tid att lära sig vad är riktig skillnade mellan de. 
+            Css Box sizing egenskapar påverkar bara bredd och höjd, och den skillnad ser man bara man har padding och border på element.</p>
+            <h2 class="heading_2">Content-box</h2> 
+            <p> class ="PARAGRAPH"I Den här värden Width and height bara påverka bara på content av ett element.
+             Den här värden inkludera ingen border och padding till exempel:</p>
+            <p class ="PARAGRAPH">box { Width: 100px; Height:200px; Border:1px; Padding:10px;}</p>
+            <p class ="PARAGRAPH">Width(100px) = (höger + vänster border = 2px) + (höger + vänster padding = 20px) = 122px.</p>
+            <p class ="PARAGRAPH">Height(200px) = (upp+ner padding = 2px) + (Top + bottom border= 20px) = 222px.</p>
+            <img class ="image_1" src="Images/picture.png" alt ="boxmodell">
+            <h2 class="heading_2">Border box</h2>
+            <p class ="PARAGRAPH">I Den här värden som ta bredd och längd av ett elemnt tilsammans med content, 
+            padding och border självkart ingen margin. Border and padding är inne i låda i border-box värden till exempel</p>
+            <p class ="PARAGRAPH">box{ Width: 100px; Height:200px; Border:1px; Padding:10px; } </p> 
+            <p class ="PARAGRAPH">Width(100px) = (höger + vänster border = 2px) + (höger + vänster padding = 20px) = 100px.</p>
+            <p class ="PARAGRAPH">Height(200px) = (upp+ner padding = 2px) + (Top + bottom border= 20px) = 200px.</p>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy;<b>Uppgift 2 i Webbteknik 2 vid Linnéuniversitetet.</b></p>
+         </footer>
+
+</body>
+</html>
+    

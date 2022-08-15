@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*stil för grid layout*/
+body {
+    background-color: #746f64;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 170px minmax(300px,650px) 200px auto;
+    grid-template-rows: 200px auto 70px;
+    grid-template-areas:
+        ".     header header header  ."
+        ".     nav    main   main    ."
+        ".     footer footer footer  ." ;
+}
+/*stil för menuicon i mobil layout*/
+#menuicon, #menucheckbox {
+    display: none;
+}
+/*stil för navigationbar*/
+nav {
+    grid-area: nav;
+    background-color: #687a6c;
+   
+}
+/*stil för navigationlistor*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+/*stil för navigationlänkar*/
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 0.4rem;
+
+  
+}
+/*stil för navigationlänkar i visited*/
+nav a:link, nav a:visited {
+    color: #a5d6a8;
+}
+/*stil för navigationlänkar i active and hover */
+nav a:hover, nav a:active {
+    background-color: #c9eed9;
+    color: #4f5f3e;
+}
+/*stil för navigationlänkar i opensidan */
+nav a.openPage::before {
+    content: "* ";
+}
+
+/* ------ Slut på  navigering ----- */
+
+/*stil för header av alla sidan */
+.header {
+    grid-area: header;
+    background-color: #7e7364;
+    background-image: url(../images/lake.jpg);
+    background-size:cover;
+    color: #c45353;
+    padding: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgb(179, 40, 40);
+    font-family: "Lucida Handwriting";
+    font-size: 2.3rem;
+    text-align: center;
+}
+/*stil för rubrik i header*/
+header h1 {
+    margin: 0 auto;
+   
+}
+
+/*stil för huvud sid på alla sidan */
+main {
+    grid-area: main;
+    background-color: #d4d4be;
+    padding: 10px;
+}
+/*stil för huvud rubrik på alla sidan */
+.headings {
+    font-size: 1.8rem;
+    color: hsl(180, 76%, 21%);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    font-style: italic;
+
+}
+/*stil för andra rubrik på alla sidan */
+.heading_2{
+    color: #2f4131;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+ }
+    /* style på alla text på alla sidor*/
+.PARAGRAPH {
+font-family: Arial, Helvetica, sans-serif;
+ text-align: justify;
+}
+
+/*stil för aside på alla sidan */
+
+/*stil för bilder på alla sidan */
+img{
+    max-width: 100%;
+}
+.image_1{
+    width:450px;
+    height:300px;
+    display: block;
+    border: 1px solid rgb(68, 41, 41);
+    }
+.image_2{
+    transition: transform 2s;
+    z-index: 1;
+
+}
+.image_2:hover{
+    z-index: 10;
+    transform: scale(2);
+}
+.image_3{
+    opacity:0.5;
+
+}
+.image_3:hover{
+    opacity: 1;
+}
+.extra_link{
+ transition-property: border-radius;
+ transition-duration: 2s;
+ width: 100px;
+background-color: darkkhaki;
+border:1px solid rgb(131, 72, 51);
+text-decoration: none;
+ }
+.extra_link:hover{
+    border-radius: 25px;
+    background-color: rgb(66, 28, 104);
+    color:rgb(226, 143, 71)
+}
+/*stil för footer av alla sidan */
+footer {
+    grid-area: footer;
+    background-color: #7e7364;
+    padding: 10px;
+    color: #FFFFFF;
+    border: 1px solid #352323;
+    text-align: center;
+    font-style: oblique;
+    font-family: "Lucida Handwriting";
+    font-size: 1.2rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    
+}
+
+
+/*Stil för responsive screen 750px*/
+@media screen and (max-width:750px){
+
+   .floatImg {
+    float: none;
+}
+}
+/*Stil för Responsive screen 650px*/
+@media screen and (max-width:650px){
+    body{
+        grid-template-columns: auto minmax(300px,650px) 200px auto;
+        grid-template-rows:min-content 33px auto;
+        grid-template-areas:
+        " header header header header"
+        ".       nav    nav    ."
+        ".       main   main   ."
+        " footer footer footer footer";
+    }
+    nav ul{
+       flex-direction: row;
+    }
+  nav a.openPage{
+      background-color: #7e9ebe;
+  }
+  nav a.openPage::before{
+      content: "";
+  }
+}
+/*Stil förv responsive screen 500px*/
+@media screen and (max-width:500px){
+    body{
+        display: block;
+    }
+    .header{
+        background-image: none;
+    }
+   
+}
+/*Stil förv responsive screen 650px*/
+/*stil för menuicon*/
+@media screen and (max-width:400px){
+    #menuicon{
+        display: inline-block;
+        background-image:url(../images/menuicon.png);
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+   
+    #menucheckbox{
+        display: none;
+    }
+    #menucheckbox:checked ~ ul{
+        display: none;
+    }
+    #menucheckbox ~ ul{
+        display: flex;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+   
+}
